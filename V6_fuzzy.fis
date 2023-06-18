@@ -1,0 +1,39 @@
+[System]
+Name='V6_fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=5
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='error'
+Range=[-3.7 2]
+NumMFs=5
+MF1='MN':'trapmf',[-3.84 -3.81 -1.814 -1.39]
+MF2='N':'trimf',[-1.73 -1.19279105628373 0]
+MF3='C':'trimf',[-0.995 -0.012 0.393716268311487]
+MF4='P':'trimf',[0 0.433269082498071 1.49]
+MF5='MP':'trapmf',[0.551927525057825 1.15 2 3.07]
+
+[Output1]
+Name='u'
+Range=[-3e-05 3e-05]
+NumMFs=5
+MF1='MN':'trapmf',[-3.00001268498943 -4.21549894291755e-05 -2.64949894291755e-05 -2.34849894291755e-05]
+MF2='N':'trapmf',[-2.51e-05 -2.32135306553911e-05 -9.72e-06 -1.08e-06]
+MF3='C':'trimf',[-9.34e-06 9.25e-08 9.25e-06]
+MF4='P':'trimf',[4.63e-08 9.34464148033923e-06 1.72e-05]
+MF5='MP':'trapmf',[1.19814957594449e-05 1.92e-05 3.15e-05 3]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1
+4, 4 (1) : 1
+5, 5 (1) : 1
